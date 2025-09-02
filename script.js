@@ -9,12 +9,8 @@ getSumBtn.addEventListener("click", ()=>{
 	const tableRow = document.createElement("tr")
 	
 	const tableDataPrices = document.createElement("td");
-	tableDataPrices.textContent = "Total Price";
+	tableDataPrices.textContent = `Total Price ${getSum()}`;
 	tableRow.appendChild(tableDataPrices);
-	
-	const tableDataSum = document.createElement("td");
-	tableDataSum.textContent = getSum();
-	tableRow.appendChild(tableDataSum);
 	
 	table.appendChild(tableRow);
 })
