@@ -6,15 +6,12 @@ getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
 
 getSumBtn.addEventListener("click", ()=>{
-	const tableRow = document.createElement("tr")
+	const tableRow = document.createElement("tr");
 	
 	const tableDataPrices = document.createElement("td");
-	tableDataPrices.textContent = "Total Price";
+	tableDataPrices.textContent = `Total Price ${getSum()}`;
+	tableDataPrices.style.colspan = "2";
 	tableRow.appendChild(tableDataPrices);
-
-	const totalPrice = document.createElement("td");
-	totalPrice.textContent = getSum();
-	tableRow.appendChild(totalPrice);
 	
 	table.appendChild(tableRow);
 })
